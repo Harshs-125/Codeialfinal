@@ -1,0 +1,1 @@
+web: sh -c "cd codeial-front && npm i && npm start && cd .. && cd Codeial-api && npm i && nodemon index.js"
