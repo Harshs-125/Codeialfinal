@@ -35,7 +35,7 @@ function Post(props) {
   return (
     <div className="post-wrapper" key={post._id} post={post}>
       <div className="post-header">
-        <Link to={`/profile/${post.user._id}`}>
+        <Link to={`/profile/${post.user._id}`} style={{textDecoration:"none"}}>
           <div className="post-avatar">
             <img src={dp} alt="profile-img" />
             <div>

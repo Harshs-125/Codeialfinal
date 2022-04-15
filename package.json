@@ -5,10 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm server",
-    "server": "node index.js",
-    "client": "npm start --prefix codeial-front",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "build:ui": "rm -rf build && cd ./codeial-front && npm run build --prod && cp -r build ../"
   },
   "author": "",
   "license": "ISC",
