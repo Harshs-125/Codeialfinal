@@ -1,0 +1,10 @@
+const express = require("express");
+const router = express.Router();
+const auth = require("../../../controller/api/middleware/auth");
+const userApi = require("../../../controller/api/v1/users_api");
+const friendsApi = require("../../../controller/api/v1/friends_api");
+const Friendship = require("../../../models/friendship");
+router.post("/add/:userid",auth,friendsApi.add);
+router.get("/getfriends",auth,friendsApi.getfriends);
+router.post("/remove/:userid",auth,friendsApi.remove);
+module.exports = router;
